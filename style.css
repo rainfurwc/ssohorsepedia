@@ -1,0 +1,534 @@
+
+/* =================================
+   SSOHORSEPEDIA - DESIGN
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #fff7ed;
+    background: #07180e;
+}
+
+/* MAIN LAYOUT */
+
+.website {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* =================================
+   LEFT SIDEBAR
+================================= */
+
+.sidebar {
+    width: 165px;
+    min-width: 165px;
+    min-height: 100vh;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        180deg,
+        #438b32 0%,
+        #1d641d 48%,
+        #8d190d 100%
+    );
+
+    border-right: 3px solid #8c3b1e;
+    position: relative;
+    z-index: 2;
+}
+
+/* LOGO */
+
+.logo {
+    text-align: center;
+    padding: 13px 3px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffffff35;
+}
+
+.logo-horse {
+    font-size: 45px;
+    color: #f6e8d2;
+    margin-bottom: 5px;
+}
+
+.logo h1 {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: #fff2dc;
+}
+
+.logo p {
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-top: 7px;
+    color: #e0e8d4;
+}
+
+/* SIDEBAR BUTTONS */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.menu-button {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+
+    border: 1px solid #ffffff30;
+    border-radius: 7px;
+    transition: 0.25s;
+}
+
+.menu-button .icon {
+    font-size: 37px;
+}
+
+.menu-button.green {
+    background: #003d27;
+}
+
+.menu-button.red {
+    background: #850b0b;
+}
+
+.menu-button.black {
+    background: #101010;
+}
+
+.menu-button:hover {
+    transform: scale(1.04);
+    filter: brightness(1.3);
+    border-color: #f0d4a9;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 18px 2px 8px;
+    font-size: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #f2d9c5;
+}
+
+/* =================================
+   RIGHT SIDE - GLOWING BACKGROUND
+================================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 30px 45px;
+
+    background-color: #07180d;
+
+    background-image:
+        radial-gradient(circle at 12% 12%, #ffb18a 0px, transparent 5px),
+        radial-gradient(circle at 22% 24%, #f76c4d 0px, transparent 7px),
+        radial-gradient(circle at 34% 10%, #ffcfaa 0px, transparent 5px),
+        radial-gradient(circle at 48% 19%, #fa6848 0px, transparent 6px),
+        radial-gradient(circle at 62% 12%, #68d58b 0px, transparent 6px),
+        radial-gradient(circle at 80% 22%, #36bd65 0px, transparent 7px),
+        radial-gradient(circle at 91% 9%, #a5ffc0 0px, transparent 5px),
+        radial-gradient(circle at 75% 48%, #36a95b 0px, transparent 8px),
+        radial-gradient(circle at 20% 65%, #c44b32 0px, transparent 7px),
+        radial-gradient(circle at 43% 78%, #ff9a72 0px, transparent 6px),
+        radial-gradient(circle at 90% 78%, #3cc56b 0px, transparent 7px),
+        radial-gradient(ellipse at 15% 20%, #633020 0%, transparent 42%),
+        radial-gradient(ellipse at 90% 15%, #07532c 0%, transparent 48%),
+        radial-gradient(ellipse at 55% 100%, #061d10 0%, transparent 60%),
+        linear-gradient(120deg, #261b13, #102619 65%, #032515);
+
+    background-size: 180px 180px, 230px 210px,
+        260px 250px, 190px 230px,
+        240px 210px, 210px 240px,
+        280px 190px, 250px 270px,
+        220px 210px, 270px 240px,
+        230px 260px, auto, auto, auto, auto;
+}
+
+/* =================================
+   TOP HEADER
+================================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 55px;
+}
+
+.top-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #f1c49c;
+}
+
+.guest {
+    padding: 11px 17px;
+    background: #092b1bce;
+    border: 1px solid #83a47a;
+    border-radius: 25px;
+    color: #f4e6d3;
+    font-size: 13px;
+}
+
+/* =================================
+   WELCOME SECTION
+================================= */
+
+.welcome {
+    max-width: 720px;
+    padding: 30px 0 45px;
+}
+
+.eyebrow {
+    color: #f3a17f;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.welcome h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 65px);
+    line-height: 1.12;
+    color: #fff0dc;
+    text-shadow: 0 4px 20px #00000070;
+    margin-bottom: 22px;
+}
+
+.welcome > p:not(.eyebrow) {
+    max-width: 470px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e2e3d8;
+    margin-bottom: 27px;
+}
+
+.explore {
+    display: inline-block;
+    padding: 15px 22px;
+    border-radius: 5px;
+    background: #8c1915;
+    border: 1px solid #d46d4c;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.explore:hover {
+    background: #b72c22;
+}
+
+/* =================================
+   QUICK LINKS
+================================= */
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+    max-width: 850px;
+    margin-top: 30px;
+}
+
+.quick-card {
+    display: block;
+    padding: 23px;
+    text-decoration: none;
+    color: white;
+    background: #063b26dc;
+    border: 1px solid #71916a;
+    border-radius: 9px;
+    transition: 0.2s;
+}
+
+.quick-card:nth-child(2) {
+    background: #650f0fdf;
+    border-color: #b65b48;
+}
+
+.quick-card:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.2);
+}
+
+.quick-card span {
+    font-size: 32px;
+}
+
+.quick-card h3 {
+    margin-top: 12px;
+    margin-bottom: 9px;
+    font-family: Georgia, serif;
+}
+
+.quick-card p {
+    color: #e0dfd3;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =================================
+   INFORMATION SECTIONS
+================================= */
+
+.information {
+    max-width: 850px;
+    margin-top: 35px;
+    padding: 23px;
+    background: #071d14b8;
+    border: 1px solid #496747;
+    border-radius: 8px;
+}
+
+.information h2 {
+    font-family: Georgia, serif;
+    color: #f2d4b2;
+    margin-bottom: 10px;
+}
+
+.information p {
+    color: #d7ded2;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 55px;
+    padding: 20px 0;
+    color: #c4c9b9;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 115px;
+        min-width: 115px;
+        padding: 8px 5px;
+    }
+
+    .logo h1 {
+        font-size: 12px;
+    }
+
+    .menu-button {
+        font-size: 13px;
+        min-height: 85px;
+    }
+
+    .menu-button .icon {
+        font-size: 29px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h2 {
+        font-size: 35px;
+    }
+}
+
+/* ===== SSOHORSEPEDIA ACCOUNT PAGE ===== */
+
+#account {
+    position: relative;
+    min-height: 650px;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(5, 24, 16, 0.82), rgba(8, 12, 10, 0.91)),
+        url("images/sso-background.jpg") center/cover no-repeat,
+        #10291d;
+}
+
+#account h2 {
+    color: #e5eee4;
+    font-size: 32px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+#account > p {
+    color: #b9c9bc;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+#auth-container {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    background: rgba(13, 29, 21, 0.96);
+    border: 1px solid rgba(113, 157, 112, 0.45);
+    border-top: 4px solid #a8323c;
+    border-radius: 12px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+#auth-container h3 {
+    color: #e7eee5;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#auth-container input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    background: #172e22;
+    color: white;
+    border: 1px solid #385744;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+
+#auth-container input:focus {
+    border-color: #9b343e;
+    box-shadow: 0 0 8px rgba(155, 52, 62, 0.3);
+}
+
+#auth-container button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background: #8f303b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#auth-container button:hover {
+    background: #ad3d49;
+    transform: translateY(-2px);
+}
+
+#auth-container p {
+    color: #b9c9bc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#auth-container a {
+    color: #a9c99e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#auth-container a:hover {
+    color: white;
+}
+
+#auth-message {
+    color: #e2b5a0;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.account-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.account-tag {
+    color: #c45b61;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.account-heading h2 {
+    margin-top: 12px;
+}
+
+#auth-container .auth-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+#auth-container .auth-tabs button {
+    flex: 1;
+    background: #1b3527;
+    color: #b8c8ba;
+    border: 1px solid #385744;
+    font-size: 12px;
+    padding: 12px 5px;
+    margin: 0;
+}
+
+#auth-container .auth-tabs button.active {
+    background: #87313b;
+    color: white;
+    border-color: #a84750;
+}
+
+#auth-container label {
+    display: block;
+    color: #a9c99e;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin: 17px 0 8px;
+}
+
+#auth-container .auth-description {
+    margin: -15px 0 22px;
+    font-size: 13px;
+}
+

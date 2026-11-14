@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSOHorsepedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="website">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-horse">♞</div>
+            <h1>SSOHorsepedia</h1>
+            <p>YOUR JORVIK ARCHIVE</p>
+        </div>
+
+        <nav class="menu">
+
+            <a href="#horses" class="menu-button green">
+                <span class="icon">🐎</span>
+                <span>Horses</span>
+            </a>
+
+            <a href="#wishlist" class="menu-button red">
+                <span class="icon">🤍</span>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="#my-horses" class="menu-button green">
+                <span class="icon">🏡</span>
+                <span>My horses</span>
+            </a>
+
+            <a href="#news" class="menu-button red">
+                <span class="icon">✦</span>
+                <span>Star Stable News</span>
+            </a>
+
+            <a href="#account" class="menu-button black">
+                <span class="icon">♟</span>
+                <span>Account</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            MADE FOR HORSE LOVERS
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN AREA ON THE RIGHT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <span class="top-label">THE WORLD OF JORVIK</span>
+            <span class="guest">♞ &nbsp; Guest</span>
+        </header>
+
+        <section class="welcome" id="horses">
+            <p class="eyebrow">WELCOME TO SSOHORSEPEDIA</p>
+
+            <h2>A world full of<br>horses to discover.</h2>
+
+            <p>
+                Your personal place to explore Star Stable horses,
+                collect your favourites and keep track of your adventures.
+            </p>
+
+            <a href="#horse-guide" class="explore">
+                DISCOVER THE HORSES →
+            </a>
+        </section>
+
+        <section class="quick-links" id="horse-guide">
+
+            <a href="#horses" class="quick-card">
+                <span>🐎</span>
+                <h3>Horse Guide</h3>
+                <p>Explore breeds and coats.</p>
+            </a>
+
+            <a href="#wishlist" class="quick-card">
+                <span>♡</span>
+                <h3>Dream Horses</h3>
+                <p>Keep your wishlist close.</p>
+            </a>
+
+            <a href="#my-horses" class="quick-card">
+                <span>🏡</span>
+                <h3>Your Stable</h3>
+                <p>Meet your own horses.</p>
+            </a>
+
+        </section>
+
+        <section class="information" id="wishlist">
+            <h2>Your Jorvik journey begins here</h2>
+            <p>
+                A place for every dream horse, every collection
+                and every adventure.
+            </p>
+        </section>
+
+        <section class="information" id="my-horses">
+            <h2>My Horses</h2>
+            <p>Your personal stable will live here.</p>
+        </section>
+
+        <section class="information" id="news">
+            <h2>Star Stable News</h2>
+            <p>Updates, events and bazaar information.</p>
+        </section>
+
+        
+
+<section class="information" id="account">
+    <div class="account-heading">
+        <span class="account-tag">SSOHORSEPEDIA MEMBERS</span>
+        <h2>Your Stable Awaits</h2>
+        <p>Join the community and keep all your horses and wishes together.</p>
+    </div>
+
+    <div id="auth-container">
+        <div class="auth-tabs">
+            <button type="button" id="login-tab" class="active"
+                onclick="showLogin()">LOG IN</button>
+            <button type="button" id="signup-tab"
+                onclick="showSignup()">CREATE ACCOUNT</button>
+        </div>
+
+        <div id="login-form">
+            <h3>Welcome Back</h3>
+            <p class="auth-description">Return to your stable.</p>
+
+            <label for="login-email">EMAIL ADDRESS</label>
+            <input type="email" id="login-email" placeholder="Your email">
+
+            <label for="login-password">PASSWORD</label>
+            <input type="password" id="login-password" placeholder="Your password">
+
+            <button class="auth-submit" type="button" onclick="login()">
+                ENTER YOUR STABLE
+            </button>
+        </div>
+
+        <div id="signup-form" style="display:none;">
+            <h3>Create Your Account</h3>
+            <p class="auth-description">Your SSOHorsepedia journey starts here.</p>
+
+            <label for="signup-username">STABLE NAME / USERNAME</label>
+            <input type="text" id="signup-username" placeholder="Choose a username">
+
+            <label for="signup-email">EMAIL ADDRESS</label>
+            <input type="email" id="signup-email" placeholder="Your email">
+
+            <label for="signup-password">PASSWORD</label>
+            <input type="password" id="signup-password" placeholder="Create a password">
+
+            <button class="auth-submit" type="button" onclick="signup()">
+                CREATE MY ACCOUNT
+            </button>
+        </div>
+
+        <div id="profile" style="display:none;">
+            <h3>Welcome to your stable!</h3>
+            <p>You are logged in as <span id="profile-username"></span>.</p>
+            <button class="auth-submit" type="button" onclick="logout()">LOG OUT</button>
+        </div>
+
+        <p id="auth-message"></p>
+    </div>
+</section>
+
+
+
+        <footer>
+            SSOHORSEPEDIA · UNOFFICIAL STAR STABLE FAN PROJECT
+        </footer>
+
+    </main>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
